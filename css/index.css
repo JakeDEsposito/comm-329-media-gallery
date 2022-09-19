@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+    font-family: 'Roboto', san-serif !important;
+}
+
+/* Navigation Menus */
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Media Cards */
+.media-card {
+    border-radius: 1rem;
+    border-width: 0.1mm;
+    border: solid gray;
+    width: fit-content;
+}
+
+.media-card img {
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.tall {
+    width: 12rem;
+}
+
+
+.media-card > main {
+    padding: 1rem;
+    width: fit-content;
+}
+
+.media-card > header > img {
+    width: -webkit-fill-available;
+    border-radius: 0.8rem 0.8rem 0 0;
+    border-bottom: solid gray;
+}
+
+.media-card > img {
+    border-radius: 50%;
+}
+
+.media-card h1 {
+    text-align: left;
+}
+
+section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
