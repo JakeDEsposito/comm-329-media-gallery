@@ -9,6 +9,7 @@
         <title>Media Gallery</title>
 
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <script src="./res/dataGenerator.js"></script>
         
         <script src="./res/index.js" defer></script>
     </head>
@@ -22,20 +23,26 @@
             <a>More</a>
         </nav>
 
-        <div>
-            <img id="current-img">
+        <div class="dynamic-slideshow">
+            <div>
+                <img id="current-img">
+                <h1 id="current-img-title"></h1>
+                <div id="prev" onclick="prevImg()">prev</div>
+                <div id="next" onclick="nextImg()">next</div>
+            </div>
+
             <div id="images">
                 <!-- Images -->
             </div>
         </div>
 
+        <br>
+
         <section id="media-cards">
             <!-- Media Cards -->
         </section>
 
-        <footer>
-
-        </footer>
+        <footer>© Jake D'Esposito | All photos from Lorem Picum</footer>
 
     </body>
 </html>

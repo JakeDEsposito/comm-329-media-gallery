@@ -4,18 +4,93 @@
     font-family: 'Roboto', san-serif !important;
 }
 
+body {
+    background-color: rgb(65, 65, 65);
+}
+
+img {
+    object-fit: cover;
+}
+
+br {
+
+}
+
 /* Navigation Menus */
 nav {
     display: flex;
     justify-content: space-around;
+    color: white;
+    margin: 3mm;
+}
+
+nav a {
+    transition: transform 0.1s ease;
+}
+
+nav a:hover {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+/* Dynamic Slideshow */
+.dynamic-slideshow {
+    background-color: white;
+}
+
+.dynamic-slideshow > div {
+    position: relative;
+}
+
+.dynamic-slideshow #current-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.dynamic-slideshow #current-img-title {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    color: white;
+    text-shadow: 0.5mm 0.5mm 3mm black;
+}
+
+.dynamic-slideshow #next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.dynamic-slideshow #prev {
+    position: absolute;
+    top: 50%;
+}
+
+.dynamic-slideshow #images {
+    display: flex;
+    height: auto;
+    overflow: scroll hidden;
+}
+
+.dynamic-slideshow #images > img {
+    width: 25%;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.dynamic-slideshow #images > img:hover {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
 }
 
 /* Media Cards */
 .media-card {
-    border-radius: 1rem;
-    border-width: 0.1mm;
-    border: solid gray;
+    border-width: 0.2mm;
+    border-radius: 0.5mm;
+    border: solid white;
     width: fit-content;
+    background-color: white;
+    margin: 1mm;
 }
 
 .media-card img {
@@ -35,7 +110,6 @@ nav {
 
 .media-card > header > img {
     width: -webkit-fill-available;
-    border-radius: 0.8rem 0.8rem 0 0;
     border-bottom: solid gray;
 }
 
@@ -48,6 +122,20 @@ nav {
 }
 
 section {
+    /*
     display: grid;
     grid-template-columns: auto auto auto auto;
+    */
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Footer */
+footer {
+    color: white;
+    text-align: center;
+    margin: 3mm;
 }

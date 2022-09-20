@@ -1,11 +1,11 @@
 [
     {
-        "url": "https://picsum.photos/200/300",
+        "url": "https://picsum.photos/1600/900",
         "title": "A Very Good Title",
         "description": "A very good description."
     },
     {
-        "url": "https://picsum.photos/200/301",
+        "url": "https://picsum.photos/1600/901",
         "title": "An Even Better Title",
         "description": "A even better description."
     }
