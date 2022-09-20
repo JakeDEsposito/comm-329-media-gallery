@@ -36,6 +36,7 @@ nav a:hover {
 /* Dynamic Slideshow */
 .dynamic-slideshow {
     background-color: white;
+    padding: 1mm 1rem 0.5rem 1rem;
 }
 
 .dynamic-slideshow > div {
