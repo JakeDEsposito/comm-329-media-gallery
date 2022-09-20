@@ -4,6 +4,10 @@
     font-family: 'Roboto', san-serif !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: rgb(65, 65, 65);
 }
@@ -26,6 +30,7 @@ nav {
 
 nav a {
     transition: transform 0.1s ease;
+    cursor: pointer;
 }
 
 nav a:hover {
@@ -54,17 +59,34 @@ nav a:hover {
     margin: 0;
     color: white;
     text-shadow: 0.5mm 0.5mm 3mm black;
+    padding: 1rem;
 }
 
 .dynamic-slideshow #next {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 0.5rem;
+    width: 2rem;
+    transition: transform 0.1s ease;
+}
+
+.dynamic-slideshow #next:hover {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
 }
 
 .dynamic-slideshow #prev {
     position: absolute;
     top: 50%;
+    left: 0.5rem;
+    width: 2rem;
+    transform: rotate(180deg);
+    transition: transform 0.1s ease;
+}
+
+.dynamic-slideshow #prev:hover {
+    scale: 0.9; 
+    transition: transform 0.1s ease;
 }
 
 .dynamic-slideshow #images {
@@ -123,15 +145,18 @@ nav a:hover {
 }
 
 section {
-    /*
+    
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    */
-
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: space-evenly;
+    grid-gap: 1rem;
+    
+    /*
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    */
 }
 
 /* Footer */
