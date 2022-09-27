@@ -87,14 +87,13 @@
             </details>
         </nav>
 
-        <!-- TODO: Make current-img smaller so that the user can see the stuff below it -->
         <!-- TODO: Use Icon characters instead of bad svg -->
         <div class="dynamic-slideshow">
             <div>
                 <img id="current-img">
                 <h1 id="current-img-title"></h1>
-                <img id="prev" onclick="prevImg()" src="./res/arrow.svg">
-                <img id="next" onclick="nextImg()" src="./res/arrow.svg">
+                <div id="prev" onclick="prevImg()">&lt;</div>
+                <div id="next" onclick="nextImg()">></div>
             </div>
 
             <div id="images">

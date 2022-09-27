@@ -32,6 +32,8 @@ nav {
 nav a {
     transition: transform 0.1s ease;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 nav a:hover {
@@ -75,12 +77,18 @@ nav > details[open] > summary::before {
         transform: scale(0.98);
         transition: transform 0.1s ease;
     }
+
+    .dynamic-slideshow {
+       display: none;
+    }
 }
 
 /* Dynamic Slideshow */
 .dynamic-slideshow {
     background-color: white;
     padding: 1mm 1rem 0.5rem 1rem;
+    max-width: 900px;
+    margin: auto;
 }
 
 .dynamic-slideshow > div {
@@ -105,8 +113,11 @@ nav > details[open] > summary::before {
     position: absolute;
     top: 50%;
     right: 0.5rem;
-    width: 2rem;
     transition: transform 0.1s ease;
+    cursor: default;
+    font-size: xx-large;
+    color: white;
+    backdrop-filter: brightness(0.5);
 }
 
 .dynamic-slideshow #next:hover {
@@ -118,9 +129,11 @@ nav > details[open] > summary::before {
     position: absolute;
     top: 50%;
     left: 0.5rem;
-    width: 2rem;
-    transform: rotate(180deg);
     transition: transform 0.1s ease;
+    cursor: default;
+    font-size: xx-large;
+    color: white;
+    backdrop-filter: brightness(0.5);
 }
 
 .dynamic-slideshow #prev:hover {
@@ -228,4 +241,8 @@ footer {
 #popup img {
     width: 100%;
     height: auto;
+}
+
+#popup div span {
+    cursor: pointer;
 }
