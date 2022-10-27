@@ -192,6 +192,15 @@ nav > details[open] > summary::before {
     text-align: left;
 }
 
+.media-card p {
+    text-overflow:ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
 section {
     
     display: grid;
@@ -236,9 +245,47 @@ footer {
 
 #popup img {
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+#popup div {
+    display: grid;
+    grid-template-areas:
+        "img title exit"
+        "img description description";
+    grid-template-rows: max-content auto;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+
+    height: -webkit-fill-available;
+}
+
+@media screen and (max-width: 768px) {
+    #popup div {
+        grid-template-areas:
+            "img exit"
+            "title title"
+            "description description";
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 1fr auto auto;
+    }
 }
 
 #popup div span {
     cursor: pointer;
+    grid-area: exit;
+    height: fit-content;
+    text-align: right;
+}
+
+#popup div > img {
+    grid-area: img
+}
+
+#popup div > #popup-title {
+    grid-area: title;
+}
+
+#popup div > #popup-description {
+    grid-area: description;
 }

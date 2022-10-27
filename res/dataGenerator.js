@@ -1,11 +1,14 @@
-function dataGenerator(items) {
+function dataGenerator(items, wordsPerItem) {
     let data = []
+
+    if (!wordsPerItem)
+        wordsPerItem = 5
 
     for(let i = 0; i < items; i++) {
         data.push({
             url: "https://picsum.photos/1600/" + (900 + i),
             title: `Title ${i + 1}`,
-            description: LoremWords(5)
+            description: LoremWords(wordsPerItem)
         })
     }
 

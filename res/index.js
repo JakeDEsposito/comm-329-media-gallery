@@ -1,7 +1,7 @@
 //$.getJSON("./res/data.json", (data) => {
 //})
 
-const data = dataGenerator(14)
+const data = dataGenerator(14, 60)
 
 $.each(data, (i, value) => {
 
