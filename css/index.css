@@ -84,13 +84,15 @@ nav > details[open] > summary::before {
 /* Dynamic Slideshow */
 .dynamic-slideshow {
     background-color: white;
-    padding: 1mm 1rem 0.5rem 1rem;
-    max-width: 900px;
+    padding: 1mm 0 0.5rem 0;
+    max-width: 94%;
+    max-height: 500px;
+    overflow-y: hidden;
     margin: auto;
+    position: relative;
 }
 
 .dynamic-slideshow > div {
-    position: relative;
 }
 
 .dynamic-slideshow #current-img {
@@ -161,14 +163,7 @@ nav > details[open] > summary::before {
     border-width: 0.2mm;
     border-radius: 0.5mm;
     border: solid white;
-    width: fit-content;
     background-color: white;
-    margin: 1mm;
-}
-
-.media-card img {
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
 }
 
 
@@ -198,9 +193,9 @@ nav > details[open] > summary::before {
 section {
     
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-columns: repeat(auto-fit, 350px);
     justify-content: space-evenly;
-    grid-gap: 1rem;
+    grid-gap: 1rem 0;
     
     /*
     display: flex;
@@ -239,7 +234,7 @@ footer {
 
 #popup img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 #popup div {
