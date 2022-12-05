@@ -15,6 +15,8 @@ body {
 
 img {
     object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
 /* Navigation Menus */
@@ -169,15 +171,7 @@ nav > details[open] > summary::before {
     aspect-ratio: 1 / 1;
 }
 
-.tall {
-    width: 12rem;
-}
 
-
-.media-card > main {
-    padding: 1rem;
-    width: fit-content;
-}
 
 .media-card > header > img {
     width: -webkit-fill-available;
